@@ -13,7 +13,7 @@ Ingrese el comportamiento esperado
 **Comportamiento Actual**
 Ingrese el comportamiento actual
 
-**Pasos a repodrucir**
+**Pasos a reproducir**
 Steps to reproduce the behavior:
 1. Go to '...'
 2. Click on '....'
@@ -23,7 +23,7 @@ Steps to reproduce the behavior:
 **Evidencias**
 Agregue aquí las evidencias
 
-**Contexto (Ambiente de ejecución)**
-Apps Version: -v
-OS:-v
-Browser:
+**Contexto (Ambiente de ejecución) **
+Apps Versión: 5.18.0
+OS: Windows
+Browser: Chrome
