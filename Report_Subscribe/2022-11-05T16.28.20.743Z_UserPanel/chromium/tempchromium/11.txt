@@ -1,0 +1,14 @@
+body
+  div.body-drag-top
+  script#config
+    #text
+  script#session
+    #text
+  script#features
+    #text
+  script#seo
+    #text
+  script#remote-configuration
+    #text
+  script
+  script
