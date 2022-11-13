@@ -1,0 +1,20 @@
+Feature: Tags
+
+  @user1 @web
+  Scenario: Como usuario de ghost creo un tag interno
+    Given I navigate to page "http://localhost:2368/ghost"
+    And I wait for 4 seconds
+    And I enter email "<EMAIL>"
+    And I enter password "<PASSWORD>"
+    And I click Sign in
+    And I wait for 4 seconds
+    And I click Tags option
+    And I wait for 2 seconds
+    And I click Internal Tags
+    And I wait for 4 seconds
+    And I click New Tag
+    And I fill form tag name "#InternalTagTesting"
+    Then I save the tag
+    And I wait for 4 seconds
+    And I click Tags option
+    And I wait for 4 seconds
