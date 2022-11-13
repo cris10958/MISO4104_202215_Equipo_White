@@ -29,10 +29,28 @@
 
 - Ejecutar prueba Cypress (MISO4104_202215_Equipo_White\Semana5\Cypress\AlexanderBenitez)
 
+  Descargar las fuentes del repositorio MISO4104_202215_Equipo_White/Semana5/Cypress/AlexanderBenitez/Ghost_e2e/.
+  
+  La estructura de carpetas es estandar, en la carpeta e2e se encuentran los 10 script, segun la tabla indicada anteriormente
+  ![image](https://user-images.githubusercontent.com/111475768/201525025-802f66ba-b678-4571-b771-df80f7806420.png)
+  
+  Tener en cuenta, para cada script, se deben modificar las credenciales de la cuenta de Ghost que previamente debe tener creada:
+  ![image](https://user-images.githubusercontent.com/111475768/201525149-3898b14c-efb7-4fd3-8253-452c987136cc.png)
+  
+  Si desea correr la prueba en modo headless se debe lanzar el siguiente comando en el directorio Ghost_e2e/
+  ```
+  cypress run --headless 
+  ```
+  Las evidencias de las pruebas quedaran almacenadas en las carpetas screenshots y videos respectivamente.
+  ![image](https://user-images.githubusercontent.com/111475768/201525278-0f8a3260-42f4-456f-8dfe-e65242e5f978.png)
+
+
+
+
 - Ejecutar prueba Cypress (MISO4104_202215_Equipo_White\Semana5\Cypress\AlexanderContreras)
   
 
-  copiar la carpeta e instalar las depenencias
+  copiar la carpeta e instalar las dependencias
   ```
   npm install
   ```
