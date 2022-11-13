@@ -30,6 +30,25 @@
 - Ejecutar prueba Cypress (MISO4104_202215_Equipo_White\Semana5\Cypress\AlexanderBenitez)
 
 - Ejecutar prueba Cypress (MISO4104_202215_Equipo_White\Semana5\Cypress\AlexanderContreras)
+  
+
+  copiar la carpeta e instalar las depenencias
+  ```
+  npm install
+  ```
+  Previamente se debe tener un usuario creado en ghost, las credenciales se debe colocar en el archivo con ruta:
+  ```
+  cypress/e2e/ghost.cy.js #en el método login
+  ```
+  si se desea correr la prueba en modo headless se debe lanzar el siguiente comando en el directorio donde se copio la carpeta
+  ```
+  cypress run --headless
+  ```
+  Si se desea ejecutar la prueba en modo visual entonces se debe descomprimir la carpeta en un proyecto vacio de cypress reemplazando la estructura y luego ejecutar
+  ```
+  cypress open
+  ```
+  luego en el navegador que se va a abrir se debe localizar el proyecto y luego el script ghost.cy
 
 - Ejecutar prueba Kraken (MISO4104_202215_Equipo_White\Semana5\Kraken\LauraFonseca)
 
