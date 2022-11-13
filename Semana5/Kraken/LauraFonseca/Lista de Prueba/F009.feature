@@ -1,0 +1,26 @@
+Feature: Crear una nueva pagina
+
+@user1 @web
+Scenario: Como administrador de la aplicación Ghost realizo el login, el cambio del nombre y descipción de la página
+  Given I navigate to page "http://localhost:2369/ghost/#/signin"
+  And I wait for 2 seconds
+  When I enter email "<USERNAME>"
+  And I wait for 1 seconds
+  When I enter password "<PASSWORD>"
+  And I wait for 1 seconds
+  Then I click login
+  And I wait for 3 seconds
+  When I open genral setting
+  And I wait for 1 seconds
+  When I open general tarject
+  And I wait for 1 seconds
+  When I open title and description
+  And I wait for 1 seconds
+  When I edit tittle general "<new_title_general>"
+  And I wait for 1 seconds
+  When I edit description general "<new_description_general>"
+  And I wait for 1 seconds
+  When I save settings
+  And I wait for 1 seconds
+  Then I open view site
+  And I wait for 5 seconds
