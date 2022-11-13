@@ -5,7 +5,7 @@ function login() {
     cy.wait(500)
     cy.get('input[name=password]').type('desarrollado')
     cy.wait(500)
-    cy.get('button[id=ember10]').click({force: true})
+    cy.get('button[class="login gh-btn gh-btn-login gh-btn-block gh-btn-icon js-login-button ember-view"]').click({force: true})
     cy.wait(1000)
 }
 
