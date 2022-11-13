@@ -88,7 +88,7 @@
 }
   ```
 
-  Debido a la restricción de la herramienta Kraken en Windows, se debe seleccionar solo un archivo con un escenario en la carpeta features\ y asegurar que solo un archivo tenga la extensión .feature:
+  Debido a la restricción de la herramienta Kraken en Windows, se debe seleccionar solo un archivo con un escenario en la carpeta Lista_Tests\ y asegurar que solo un archivo tenga la extensión .feature:
 
   | Orden ejecución | Archivo            | Escenario                                    |
   | --------------- | ------------------ | -------------------------------------------- |
