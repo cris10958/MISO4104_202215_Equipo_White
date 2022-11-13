@@ -6,11 +6,11 @@
 | ---------------------------------------- | ------------- | --------------------------------- |
 | Crear página                             | Pages         | Laura Fonseca, Alexander Benitez  |
 | Editar página                            | Pages         | Laura Fonseca, Alexander Benitez  |
-| Acceder a una página creada              | Pages         | Laura Fonseca, Alexander Benitez  |
+| Reversar publicación de página               | Pages         | Laura Fonseca, Alexander Benitez  |
 | Borrar página                            | Pages         | Laura Fonseca, Alexander Benitez  |
 | Crear post                               | Post          | Laura Fonseca, Alexander Benitez  |
 | Editar post                              | Post          | Laura Fonseca, Alexander Benitez  |
-| Acceder a un post creado                 | Post          | Laura Fonseca, Alexander Benitez  |
+| Reversar publicación de post                 | Post          | Laura Fonseca, Alexander Benitez  |
 | Borrar un post                           | Post          | Laura Fonseca, Alexander Benitez  |
 | Cambiar configuración modificando titulo | Settings      | Laura Fonseca, Alexander Benitez  |
 | Sign out                                 | Log           | Laura Fonseca, Alexander Benitez  |
@@ -69,6 +69,46 @@
   luego en el navegador que se va a abrir se debe localizar el proyecto y luego el script ghost.cy
 
 - Ejecutar prueba Kraken (MISO4104_202215_Equipo_White\Semana5\Kraken\LauraFonseca)
+ 
+ Para ejecutar las pruebas se debe clonar el proyecto y ubicarse en la carpeta Semana5\Kraken\LauraFonseca\
+
+  Se debe contar con la aplicación ghost instalada para ejecutar las pruebas, adicional se debe configurar el objeto con las credenciales y datos necesarios para la ejecución en el archivo properties.json modificando los valores de EMAIL Y PASSWORD según las credenciales de administrador de Ghost que se tengan. Ejemplo:
+
+  ```{
+    "USERNAME":"email_admi@correo.co",
+    "PASSWORD":"contraseña",
+    "title_new_page":"titulo2",
+    "description":"description2",
+    "new_title_page":"titulo3",
+    "title_new_post":"Nuevo Post",
+    "description_post":"Description Post",
+    "new_title_post":"Nuevo Titulo del Post",
+    "new_title_general":"Pruebas automatizadas ABP",
+    "new_description_general":"Thoughts and stories."
+}
+  ```
+
+  Debido a la restricción de la herramienta Kraken en Windows, se debe seleccionar solo un archivo con un escenario en la carpeta features\ y asegurar que solo un archivo tenga la extensión .feature:
+
+  | Orden ejecución | Archivo            | Escenario                                    |
+  | --------------- | ------------------ | -------------------------------------------- |
+  | 1               | F001.feature   | Como administrador de la aplicación Ghost realizo el login, la creación y publicación de una pagina  |
+  | 2               | F002.feature   | Como administrador de la aplicación Ghost realizo el login, la creación y edicion de una pagina publicada |
+  | 3               | F003.feature   | Como administrador de la aplicación Ghost realizo el login, la creación, publicación y eliminacion de una pagina publicada|
+  | 4               | F004.feature      | Como administrador de la aplicación Ghost realizo el login, la creación, publicación y reversión una pagina publicada|
+  | 5               | F005.feature      | Como administrador de la aplicación Ghost realizo el login, la creación y publicación de un post |
+  | 6               | F006.feature      | Como administrador de la aplicación Ghost realizo el login, la creación, publicación y edición de un post |
+  | 7               | F007.feature      | Como administrador de la aplicación Ghost realizo el login, la creación, publicación y despublicar un post   |
+  | 8               | F008.feature      | Como administrador de la aplicación Ghost realizo el login, la creación, publicación y eliminación de un post   |
+  | 9               | F009.feature      | Como administrador de la aplicación Ghost realizo el login, el cambio del nombre y descipción de la página |
+  | 10              | F010.feature | Como administrador de la aplicación Ghost realizo el sign in, el sing out y valido la redirección al login    |
+
+  Para ejecutar el test es necesario ubicarse en la misma ruta del archivo package.json del proyecto y ejecutar los siguientes comandos:
+
+  ```
+  npm i
+  ./node_modules/kraken-node/bin/kraken-node run
+  ```
 
 - Ejecutar prueba Kraken (MISO4104_202215_Equipo_White\Semana5\Kraken\DanielOchoa)
 
