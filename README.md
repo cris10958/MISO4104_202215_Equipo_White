@@ -85,8 +85,8 @@ Las imagenes de la version 5.18 a la carpeta MISO4104_202215_Equipo_White\Semana
 ```
 Adicionalmente se deben haber subida a una URL, para este caso, en el repo del team:
 ```
-* https://raw.githubusercontent.com/cris10958/MISO4104_202215_Equipo_White/main/Semana6/10EscenariosVersionComparacion/Cypress/Ghost_e2e/cypress/screenshots/scenarios_Ghost5.18.cy.js/
-* https://raw.githubusercontent.com/cris10958/MISO4104_202215_Equipo_White/main/Semana6/10EscenariosVersionComparacion/Cypress/Ghost_e2e/cypress/screenshots/scenarios_Ghost3.42.cy.js/
+* Las imagenes de la version 3.42  a https://raw.githubusercontent.com/cris10958/MISO4104_202215_Equipo_White/main/Semana6/backstopjs/v1/
+* Las imagenes de la version 5.18 ahttps://raw.githubusercontent.com/cris10958/MISO4104_202215_Equipo_White/main/Semana6/backstopjs/v2/
 ```
 Ahora desde la carpeta del backstopJS se debe contruir dinamicamente el archivo backstop.json
 ```
