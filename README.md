@@ -57,8 +57,56 @@ Copiar la carpeta e instalar las dependencias
 
 ### Instrucciones de Ejecución Kraken
 
+Las pruebas con la herramienta Kraken se realizaron con las siguientes versiones, asegúrese de tener estas versiones antes de ejecutar las pruebas:
+* Windows 10 Home
+* node 14.17.0
+* npm 6.14.13
+* cucumber 7.2.1
+* kraken-node 1.0.24
+* Android Debug Bridge version 1.0.41 Version 33.0.3-8952118
+* Ghost version: 5.18.0
+* Ghost version (regresión visual): 3.42.0 
 
+Debido a la restricción de la herramienta Kraken en Windows, se debe seleccionar solo un archivo con un escenario en la carpeta features\ y asegurar que solo un archivo tenga la extensión .feature. A continuación se lista la distribución adecuada en las versiones de Ghost bajo prueba:
 
+- Ghost 3.42.0: Kraken\Pruebas_Krake_Ghost_v3.42\features
+- Ghost 5.18.0: Kraken\Pruebas_Krake_Ghost_v5.18\features
+
+| Orden ejecución | Archivo                                                   | Escenario                     | Versión Ghost |
+| --------------- | --------------------------------------------------------- | ------------------------------| --------------|
+| 1               | \Kraken\Pruebas_Krake_Ghost_v3.42\Lista_Test\F001.feature | Crear página                  | 3.42.0        |
+| 2               | \Kraken\Pruebas_Krake_Ghost_v3.42\Lista_Test\F002.feature | Editar página                 | 3.42.0        |
+| 3               | \Kraken\Pruebas_Krake_Ghost_v3.42\Lista_Test\F003.feature | Crear página                  | 3.42.0        |
+| 4               | \Kraken\Pruebas_Krake_Ghost_v3.42\Lista_Test\F004.feature | Editar post                   | 3.42.0        |
+| 5               | \Kraken\Pruebas_Krake_Ghost_v3.42\Lista_Test\F005.feature | Reversar publicación de post  | 3.42.0        |
+| 6               | \Kraken\Pruebas_Krake_Ghost_v5.18\Lista_Test\F001.feature | Crear página                  | 5.18.0        |
+| 7               | \Kraken\Pruebas_Krake_Ghost_v5.18\Lista_Test\F002.feature | Editar página                 | 5.18.0        |
+| 8               | \Kraken\Pruebas_Krake_Ghost_v5.18\Lista_Test\F003.feature | Crear página                  | 5.18.0        |
+| 9               | \Kraken\Pruebas_Krake_Ghost_v5.18\Lista_Test\F004.feature | Editar post                   | 5.18.0        |
+| 10              | \Kraken\Pruebas_Krake_Ghost_v5.18\Lista_Test\F005.feature | Reversar publicación de post  | 5.18.0        |
+
+Adicional se debe configurar los datos necesarios para la ejecución de las pruebas en el archivo properties.json modificando los valores de EMAIL Y PASSWORD según las credenciales de administrador de Ghost que se tengan. Ejemplo:
+
+```
+  {
+    "USERNAME":"email_admi@correo.co",
+    "PASSWORD":"contraseña",
+    "title_new_page":"titulo2",
+    "description":"description2",
+    "new_title_page":"titulo3",
+    "title_new_post":"Nuevo Post",
+    "description_post":"Description Post",
+    "new_title_post":"Nuevo Titulo del Post",
+    "new_title_general":"Pruebas automatizadas ABP",
+    "new_description_general":"Thoughts and stories."
+  }
+```
+Para ejecutar el test es necesario ubicarse en la misma ruta del archivo package.json del proyecto y ejecutar los siguientes comandos:
+
+```
+  npm i
+  ./node_modules/kraken-node/bin/kraken-node run
+```
 
 ### Regresión Visual con ResembleJS
 Una vez ejecutadas ambos escenarios de pruebas, mover las imagenes de cada version de Ghost a la carpeta de ResembleJS asi:
