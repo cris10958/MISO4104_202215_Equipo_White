@@ -60,9 +60,21 @@ Copiar la carpeta e instalar las dependencias
 
 
 
+### Regresión Visual con ResembleJS
+Una vez ejecutadas ambos escenarios de pruebas, mover las imagenes de cada version de Ghost a la carpeta de ResembleJS asi:
+```
+Las imagenes de la version 3.42 a la carpeta MISO4104_202215_Equipo_White\Semana6\resemblejs\results\screenshots V1
+Las imagenes de la version 5.18 a la carpeta MISO4104_202215_Equipo_White\Semana6\resemblejs\results\screenshots V2
+```
+Se debe situar en el directorio de Resemble 
+```
+cd MISO4104_202215_Equipo_White\Semana6\resemblejs
+node index.js
+```
+![image](https://user-images.githubusercontent.com/111475768/202903289-a298556b-e1d0-4d8f-bdc7-fd232d8d6f76.png)
 
-
-
+Luego se verifica la salida HTML en la carpeta de salida
+![image](https://user-images.githubusercontent.com/111475768/202903388-f018ef71-963c-4bf9-84f3-f24be014dabd.png)
 
 
 ## Semana 5: Pruebas E2E
