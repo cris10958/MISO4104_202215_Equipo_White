@@ -76,6 +76,34 @@ node index.js
 Luego se verifica la salida HTML en la carpeta de salida
 ![image](https://user-images.githubusercontent.com/111475768/202903388-f018ef71-963c-4bf9-84f3-f24be014dabd.png)
 
+### Regresión Visual con BackStopJS
+
+Una vez ejecutadas ambos escenarios de pruebas, mover las imagenes de cada version de Ghost a la carpeta de ResembleJS asi:
+```
+Las imagenes de la version 3.42 a la carpeta MISO4104_202215_Equipo_White\Semana6\backstopjs\v1
+Las imagenes de la version 5.18 a la carpeta MISO4104_202215_Equipo_White\Semana6\backstopjs\v2
+```
+Adicionalmente se deben haber subida a una URL, para este caso, en el repo del team:
+```
+* https://raw.githubusercontent.com/cris10958/MISO4104_202215_Equipo_White/main/Semana6/10EscenariosVersionComparacion/Cypress/Ghost_e2e/cypress/screenshots/scenarios_Ghost5.18.cy.js/
+* https://raw.githubusercontent.com/cris10958/MISO4104_202215_Equipo_White/main/Semana6/10EscenariosVersionComparacion/Cypress/Ghost_e2e/cypress/screenshots/scenarios_Ghost3.42.cy.js/
+```
+Ahora desde la carpeta del backstopJS se debe contruir dinamicamente el archivo backstop.json
+```
+node build.js
+```
+Una vez generado el archivo .json, se debe ejecutar la prueba:
+```
+backstop test
+backstop aprove
+```
+Finalmente se debe revisar el archivo html con la salida del analisis.
+![image](https://user-images.githubusercontent.com/111475768/202913911-b125e81d-8d3c-48da-9403-3202bda641b6.png)
+
+
+
+
+
 
 ## Semana 5: Pruebas E2E
 
