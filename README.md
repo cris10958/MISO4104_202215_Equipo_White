@@ -78,7 +78,7 @@ Luego se verifica la salida HTML en la carpeta de salida
 
 ### Regresión Visual con BackStopJS
 
-Una vez ejecutadas ambos escenarios de pruebas, mover las imagenes de cada version de Ghost a la carpeta de ResembleJS asi:
+Una vez ejecutadas ambos escenarios de pruebas, mover las imagenes de cada version de Ghost a la carpeta de backstop asi:
 ```
 Las imagenes de la version 3.42 a la carpeta MISO4104_202215_Equipo_White\Semana6\backstopjs\v1
 Las imagenes de la version 5.18 a la carpeta MISO4104_202215_Equipo_White\Semana6\backstopjs\v2
