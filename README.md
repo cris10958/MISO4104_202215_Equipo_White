@@ -8,6 +8,9 @@ Las pruebas se hicieron con las siguientes versiones, asegurese de tener estas v
 * Ghost version: 5.18.0
 * Ghost version (regresión visual): 3.42.0 
 * node version: 14.20.1
+* En la version de Ghost 3.42.0 se debe activar el menu "Members" ya que este no viene activo en el setup inicial.
+  ![image](https://user-images.githubusercontent.com/111475768/202902662-c7caa462-6782-4586-837d-711d9c95f471.png)
+
 
 Los 10 escenarios que se plantearon para realizar la regresión visual, por lo cual fueron ejecutados en ambas versiones de Ghost son:
 
@@ -23,6 +26,39 @@ Los 10 escenarios que se plantearon para realizar la regresión visual, por lo c
 | Crear miembro                            | Members       | Cypress      |Alexander Contreras, Alexander Benitez |
 | Editar miembro                           | Members       | Cypress      |Alexander Contreras, Alexander Benitez |
 | Cambiar configuración modificando titulo | Settings      | Cypress      |Alexander Contreras, Alexander Benitez |
+
+Para la ejecucion de las pruebas de los 10 escenarios de la semana 6, se han agrupado los escenarios en un solo archivo por herramienta, por lo que puede ejecutarlo de la siguiente manera:
+
+### Instrucciones de Ejecución Cypress
+Copiar la carpeta e instalar las dependencias
+  ```
+  npm install
+  ```
+  Previamente se debe tener un usuario creado en ghost, las credenciales se debe colocar en el archivo con ruta:
+  ```
+  * cypress/e2e/scenarios_Ghost3.42.cy.js #en el método login
+  * cypress/e2e/scenarios_Ghost5.18.cy.js #en el método login
+  ```
+  si se desea correr la prueba en modo headless se debe lanzar el siguiente comando en el directorio donde se copio la carpeta
+  ```
+  cypress run --headless
+  ```
+  ![image](https://user-images.githubusercontent.com/111475768/202902709-68312ffa-e22c-442a-af3f-89b24117e372.png)
+
+
+  Si se desea ejecutar la prueba en modo visual entonces se debe descomprimir la carpeta en un proyecto vacio de cypress reemplazando la estructura y luego ejecutar
+  ```
+  cypress open
+  ```
+  luego en el navegador que se va a abrir se debe localizar el proyecto y luego ejecutar los 2 scripts
+  
+  ![image](https://user-images.githubusercontent.com/111475768/202902908-d940aa35-5bdf-4498-b155-a663af03e97c.png)
+
+
+### Instrucciones de Ejecución Kraken
+
+
+
 
 
 
