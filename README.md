@@ -1,5 +1,34 @@
 # Proyecto Pruebas automatizadas
 
+## Semana 6: Pruebas de regresión visual
+
+### Prerequisitos: 
+Las pruebas se hicieron con las siguientes versiones, asegurese de tener estas versiones antes de ejecutar las pruebas:
+* Cypress package version: 10.10.0
+* Ghost version: 5.18.0
+* Ghost version (regresión visual): 3.42.0 
+* node version: 14.20.1
+
+Los 10 escenarios que se plantearon para realizar la regresión visual, por lo cual fueron ejecutados en ambas versiones de Ghost son:
+
+| Escenario                                | Funcionalidad | Herramienta  | Integrantes                           |
+| ---------------------------------------- | ------------- | -------------| ---------------------                 |
+| Crear página                             | Pages         | Kraken       |Laura Fonseca, Daniel Ochoa            |
+| Editar página                            | Pages         | Kraken       |Laura Fonseca, Daniel Ochoa            |
+| Crear post                               | Post          | Kraken       |Laura Fonseca, Daniel Ochoa            |
+| Editar post                              | Post          | Kraken       |Laura Fonseca, Daniel Ochoa            |
+| Reversar publicación de post             | Post          | Kraken       |Laura Fonseca, Daniel Ochoa            |
+| Crear tag público                        | Tags          | Cypress      |Alexander Contreras, Alexander Benitez |
+| Editar tag público                       | Tags          | Cypress      |Alexander Contreras, Alexander Benitez |
+| Crear miembro                            | Members       | Cypress      |Alexander Contreras, Alexander Benitez |
+| Editar miembro                           | Members       | Cypress      |Alexander Contreras, Alexander Benitez |
+| Cambiar configuración modificando titulo | Settings      | Cypress      |Alexander Contreras, Alexander Benitez |
+
+
+
+
+
+
 ## Semana 5: Pruebas E2E
 
 | Escenario                                | Funcionalidad | Integrantes                       |
