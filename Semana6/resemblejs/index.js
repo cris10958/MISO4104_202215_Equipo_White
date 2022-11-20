@@ -57,6 +57,7 @@ async function executeTest() {
         analysisTime: data.analysisTime,
     }
 
+
     fs.writeFileSync(`./results/${datetime}/compare-${index}.png`, data.getBuffer());
     reports += compare(title, resultInfo, pathX, pathY, index);
   }
@@ -72,7 +73,13 @@ function compare(title, resultInfo, pathX, pathY, index) {
       return `<div class=" browser" id="test0">
       <div class=" btitle">
           <h3>${title}</h3>
-          <p>Data: ${JSON.stringify(resultInfo)}</p>
+          <h3>El resultado de la comparación es: </h3>
+          <p><strong>isSameDimensions:</strong> ${JSON.stringify(resultInfo.isSameDimensions)}</p>
+          <p><strong>dimensionDifference:</strong> ${JSON.stringify(resultInfo.dimensionDifference)}</p>
+          <p><strong>rawMisMatchPercentage:</strong> ${JSON.stringify(resultInfo.rawMisMatchPercentage)}</p>
+          <p><strong>misMatchPercentage:</strong> ${JSON.stringify(resultInfo.misMatchPercentage)}</p>
+          <p><strong>diffBounds:</strong> ${JSON.stringify(resultInfo.diffBounds)}</p>
+          <p><strong>analysisTime:</strong> ${JSON.stringify(resultInfo.analysisTime)}</p>
       </div>
       <div class="imgline">
         <div class="imgcontainer">
