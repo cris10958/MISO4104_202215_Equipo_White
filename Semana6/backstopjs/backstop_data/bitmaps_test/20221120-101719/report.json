@@ -1,0 +1,74 @@
+{
+  "testSuite": "BackstopJS",
+  "tests": [
+    {
+      "pair": {
+        "reference": "..\\bitmaps_reference\\backstop_default_Inicio_0_document_0_phone.png",
+        "test": "..\\bitmaps_test\\20221120-101719\\backstop_default_Inicio_0_document_0_phone.png",
+        "selector": "document",
+        "fileName": "backstop_default_Inicio_0_document_0_phone.png",
+        "label": "Inicio",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0.1,
+        "url": "https://github.com/cris10958/MISO4104_202215_Equipo_White/blob/main/Semana6/10EscenariosVersionComparacion/Cypress/Ghost_e2e/cypress/screenshots/scenarios_Ghost3.42.cy.js/1-3.42-before-login.png",
+        "referenceUrl": "https://github.com/cris10958/MISO4104_202215_Equipo_White/blob/main/Semana6/10EscenariosVersionComparacion/Cypress/Ghost_e2e/cypress/screenshots/scenarios_Ghost5.18.cy.js/1-5.18-before-login.png",
+        "expect": 0,
+        "viewportLabel": "phone",
+        "error": "Reference file not found C:\\Users\\AxEl\\Documents\\backstopjs\\backstop_data\\bitmaps_reference\\backstop_default_Inicio_0_document_0_phone.png"
+      },
+      "status": "fail"
+    },
+    {
+      "pair": {
+        "reference": "..\\bitmaps_reference\\backstop_default_Inicio_0_document_1_tablet.png",
+        "test": "..\\bitmaps_test\\20221120-101719\\backstop_default_Inicio_0_document_1_tablet.png",
+        "selector": "document",
+        "fileName": "backstop_default_Inicio_0_document_1_tablet.png",
+        "label": "Inicio",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0.1,
+        "url": "https://github.com/cris10958/MISO4104_202215_Equipo_White/blob/main/Semana6/10EscenariosVersionComparacion/Cypress/Ghost_e2e/cypress/screenshots/scenarios_Ghost3.42.cy.js/1-3.42-before-login.png",
+        "referenceUrl": "https://github.com/cris10958/MISO4104_202215_Equipo_White/blob/main/Semana6/10EscenariosVersionComparacion/Cypress/Ghost_e2e/cypress/screenshots/scenarios_Ghost5.18.cy.js/1-5.18-before-login.png",
+        "expect": 0,
+        "viewportLabel": "tablet",
+        "error": "Reference file not found C:\\Users\\AxEl\\Documents\\backstopjs\\backstop_data\\bitmaps_reference\\backstop_default_Inicio_0_document_1_tablet.png"
+      },
+      "status": "fail"
+    },
+    {
+      "pair": {
+        "reference": "..\\bitmaps_reference\\backstop_default_Login_0_document_0_phone.png",
+        "test": "..\\bitmaps_test\\20221120-101719\\backstop_default_Login_0_document_0_phone.png",
+        "selector": "document",
+        "fileName": "backstop_default_Login_0_document_0_phone.png",
+        "label": "Login",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0.1,
+        "url": "https://github.com/cris10958/MISO4104_202215_Equipo_White/blob/main/Semana6/10EscenariosVersionComparacion/Cypress/Ghost_e2e/cypress/screenshots/scenarios_Ghost3.42.cy.js/1-3.42-before-login.png",
+        "referenceUrl": "https://github.com/cris10958/MISO4104_202215_Equipo_White/blob/main/Semana6/10EscenariosVersionComparacion/Cypress/Ghost_e2e/cypress/screenshots/scenarios_Ghost5.18.cy.js/1-5.18-before-login.png",
+        "expect": 0,
+        "viewportLabel": "phone",
+        "error": "Reference file not found C:\\Users\\AxEl\\Documents\\backstopjs\\backstop_data\\bitmaps_reference\\backstop_default_Login_0_document_0_phone.png"
+      },
+      "status": "fail"
+    },
+    {
+      "pair": {
+        "reference": "..\\bitmaps_reference\\backstop_default_Login_0_document_1_tablet.png",
+        "test": "..\\bitmaps_test\\20221120-101719\\backstop_default_Login_0_document_1_tablet.png",
+        "selector": "document",
+        "fileName": "backstop_default_Login_0_document_1_tablet.png",
+        "label": "Login",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0.1,
+        "url": "https://github.com/cris10958/MISO4104_202215_Equipo_White/blob/main/Semana6/10EscenariosVersionComparacion/Cypress/Ghost_e2e/cypress/screenshots/scenarios_Ghost3.42.cy.js/1-3.42-before-login.png",
+        "referenceUrl": "https://github.com/cris10958/MISO4104_202215_Equipo_White/blob/main/Semana6/10EscenariosVersionComparacion/Cypress/Ghost_e2e/cypress/screenshots/scenarios_Ghost5.18.cy.js/1-5.18-before-login.png",
+        "expect": 0,
+        "viewportLabel": "tablet",
+        "error": "Reference file not found C:\\Users\\AxEl\\Documents\\backstopjs\\backstop_data\\bitmaps_reference\\backstop_default_Login_0_document_1_tablet.png"
+      },
+      "status": "fail"
+    }
+  ],
+  "id": "backstop_default"
+}

@@ -1,0 +1,148 @@
+{
+  "testSuite": "BackstopJS",
+  "tests": [
+    {
+      "pair": {
+        "reference": "..\\bitmaps_reference\\backstop_default_Login_0_document_0_phone.png",
+        "test": "..\\bitmaps_test\\20221120-103617\\backstop_default_Login_0_document_0_phone.png",
+        "selector": "document",
+        "fileName": "backstop_default_Login_0_document_0_phone.png",
+        "label": "Login",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0.1,
+        "url": "https://raw.githubusercontent.com/cris10958/MISO4104_202215_Equipo_White/main/Semana6/10EscenariosVersionComparacion/Cypress/Ghost_e2e/cypress/screenshots/scenarios_Ghost5.18.cy.js/1-5.18-before-login.png",
+        "referenceUrl": "https://raw.githubusercontent.com/cris10958/MISO4104_202215_Equipo_White/main/Semana6/10EscenariosVersionComparacion/Cypress/Ghost_e2e/cypress/screenshots/scenarios_Ghost3.42.cy.js/1-3.42-before-login.png",
+        "expect": 0,
+        "viewportLabel": "phone",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "rawMisMatchPercentage": 5.628255208333333,
+          "misMatchPercentage": "5.63",
+          "analysisTime": 20
+        },
+        "diffImage": "..\\bitmaps_test\\20221120-103617\\failed_diff_backstop_default_Login_0_document_0_phone.png"
+      },
+      "status": "fail"
+    },
+    {
+      "pair": {
+        "reference": "..\\bitmaps_reference\\backstop_default_Login_0_document_1_tablet.png",
+        "test": "..\\bitmaps_test\\20221120-103617\\backstop_default_Login_0_document_1_tablet.png",
+        "selector": "document",
+        "fileName": "backstop_default_Login_0_document_1_tablet.png",
+        "label": "Login",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0.1,
+        "url": "https://raw.githubusercontent.com/cris10958/MISO4104_202215_Equipo_White/main/Semana6/10EscenariosVersionComparacion/Cypress/Ghost_e2e/cypress/screenshots/scenarios_Ghost5.18.cy.js/1-5.18-before-login.png",
+        "referenceUrl": "https://raw.githubusercontent.com/cris10958/MISO4104_202215_Equipo_White/main/Semana6/10EscenariosVersionComparacion/Cypress/Ghost_e2e/cypress/screenshots/scenarios_Ghost3.42.cy.js/1-3.42-before-login.png",
+        "expect": 0,
+        "viewportLabel": "tablet",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "rawMisMatchPercentage": 9.845225016276043,
+          "misMatchPercentage": "9.85",
+          "analysisTime": 56
+        },
+        "diffImage": "..\\bitmaps_test\\20221120-103617\\failed_diff_backstop_default_Login_0_document_1_tablet.png"
+      },
+      "status": "fail"
+    },
+    {
+      "pair": {
+        "reference": "..\\bitmaps_reference\\backstop_default_Login_0_document_0_phone.png",
+        "test": "..\\bitmaps_test\\20221120-103617\\backstop_default_Login_0_document_0_phone.png",
+        "selector": "document",
+        "fileName": "backstop_default_Login_0_document_0_phone.png",
+        "label": "Login",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0.1,
+        "url": "https://raw.githubusercontent.com/cris10958/MISO4104_202215_Equipo_White/main/Semana6/10EscenariosVersionComparacion/Cypress/Ghost_e2e/cypress/screenshots/scenarios_Ghost5.18.cy.js/2-5.18-after-login.png",
+        "referenceUrl": "https://raw.githubusercontent.com/cris10958/MISO4104_202215_Equipo_White/main/Semana6/10EscenariosVersionComparacion/Cypress/Ghost_e2e/cypress/screenshots/scenarios_Ghost3.42.cy.js/2-3.42-after-login.png",
+        "expect": 0,
+        "viewportLabel": "phone",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "rawMisMatchPercentage": 5.628255208333333,
+          "misMatchPercentage": "5.63",
+          "analysisTime": 20
+        },
+        "diffImage": "..\\bitmaps_test\\20221120-103617\\failed_diff_backstop_default_Login_0_document_0_phone.png"
+      },
+      "status": "fail"
+    },
+    {
+      "pair": {
+        "reference": "..\\bitmaps_reference\\backstop_default_Login_0_document_1_tablet.png",
+        "test": "..\\bitmaps_test\\20221120-103617\\backstop_default_Login_0_document_1_tablet.png",
+        "selector": "document",
+        "fileName": "backstop_default_Login_0_document_1_tablet.png",
+        "label": "Login",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0.1,
+        "url": "https://raw.githubusercontent.com/cris10958/MISO4104_202215_Equipo_White/main/Semana6/10EscenariosVersionComparacion/Cypress/Ghost_e2e/cypress/screenshots/scenarios_Ghost5.18.cy.js/2-5.18-after-login.png",
+        "referenceUrl": "https://raw.githubusercontent.com/cris10958/MISO4104_202215_Equipo_White/main/Semana6/10EscenariosVersionComparacion/Cypress/Ghost_e2e/cypress/screenshots/scenarios_Ghost3.42.cy.js/2-3.42-after-login.png",
+        "expect": 0,
+        "viewportLabel": "tablet",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "rawMisMatchPercentage": 9.845225016276043,
+          "misMatchPercentage": "9.85",
+          "analysisTime": 57
+        },
+        "diffImage": "..\\bitmaps_test\\20221120-103617\\failed_diff_backstop_default_Login_0_document_1_tablet.png"
+      },
+      "status": "fail"
+    },
+    {
+      "pair": {
+        "reference": "..\\bitmaps_reference\\backstop_default_Before_Create_New_Members_0_document_0_phone.png",
+        "test": "..\\bitmaps_test\\20221120-103617\\backstop_default_Before_Create_New_Members_0_document_0_phone.png",
+        "selector": "document",
+        "fileName": "backstop_default_Before_Create_New_Members_0_document_0_phone.png",
+        "label": "Before Create New Members",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0.1,
+        "url": "https://raw.githubusercontent.com/cris10958/MISO4104_202215_Equipo_White/main/Semana6/10EscenariosVersionComparacion/Cypress/Ghost_e2e/cypress/screenshots/scenarios_Ghost5.18.cy.js/3-5.18-before-creating-new-member.png",
+        "referenceUrl": "https://raw.githubusercontent.com/cris10958/MISO4104_202215_Equipo_White/main/Semana6/10EscenariosVersionComparacion/Cypress/Ghost_e2e/cypress/screenshots/scenarios_Ghost3.42.cy.js/3-3.42-before-creating-new-member.png",
+        "expect": 0,
+        "viewportLabel": "phone",
+        "error": "Reference file not found C:\\Users\\AxEl\\Documents\\backstopjs\\backstop_data\\bitmaps_reference\\backstop_default_Before_Create_New_Members_0_document_0_phone.png"
+      },
+      "status": "fail"
+    },
+    {
+      "pair": {
+        "reference": "..\\bitmaps_reference\\backstop_default_Before_Create_New_Members_0_document_1_tablet.png",
+        "test": "..\\bitmaps_test\\20221120-103617\\backstop_default_Before_Create_New_Members_0_document_1_tablet.png",
+        "selector": "document",
+        "fileName": "backstop_default_Before_Create_New_Members_0_document_1_tablet.png",
+        "label": "Before Create New Members",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0.1,
+        "url": "https://raw.githubusercontent.com/cris10958/MISO4104_202215_Equipo_White/main/Semana6/10EscenariosVersionComparacion/Cypress/Ghost_e2e/cypress/screenshots/scenarios_Ghost5.18.cy.js/3-5.18-before-creating-new-member.png",
+        "referenceUrl": "https://raw.githubusercontent.com/cris10958/MISO4104_202215_Equipo_White/main/Semana6/10EscenariosVersionComparacion/Cypress/Ghost_e2e/cypress/screenshots/scenarios_Ghost3.42.cy.js/3-3.42-before-creating-new-member.png",
+        "expect": 0,
+        "viewportLabel": "tablet",
+        "error": "Reference file not found C:\\Users\\AxEl\\Documents\\backstopjs\\backstop_data\\bitmaps_reference\\backstop_default_Before_Create_New_Members_0_document_1_tablet.png"
+      },
+      "status": "fail"
+    }
+  ],
+  "id": "backstop_default"
+}
