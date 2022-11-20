@@ -22,14 +22,12 @@ async function executeTest() {
     throw Error(`El directorio ${dirB} no tiene imagenes para comparar`)
   }
 
-  if(filesA.length != filesB.length) {
-    throw Error('Los directorios a comparar no tienen la misma cantidad de imagenes')
-  }
+  const cant=Math.min(filesA.length,filesB.length)
 
   const datetime = new Date().toISOString().replace(/:/g, ".");
   let reports = "";
 
-  for (let index = 0; index < filesA.length; index++) {
+  for (let index = 0; index < cant; index++) {
     let x = filesA[index];
     let y = filesB[index];
     let pathX = dirA + '/' + x.name;
