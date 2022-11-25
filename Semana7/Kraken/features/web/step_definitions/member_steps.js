@@ -14,6 +14,15 @@ const email_member_error = "/html/body/div[2]/div/main/section/div[2]/form/div/s
 const label_textarea = "/html/body/div[2]/div/main/section/div[2]/form/div/section/div/div[1]/div/div[3]/textarea";
 const label_member_input = "/html/body/div[2]/div/main/section/div[2]/form/div/section/div/div[1]/div/div[2]/div/div[1]/ul/input";
 const first_label_member_ul = "/html/body/div[2]/div/main/section/div[2]/form/div/section/div/div[1]/div/div[2]/div/div[2]/div/ul";
+const filter_member_span = "/html/body/div[2]/div/main/section/div/header/section/div[2]/div[1]/span";
+const filter_member_input = "/html/body/div[1]/div/div/section/div[1]/div/div/input";
+const filter_member_apply = "/html/body/div[1]/div/div/div/button[2]";
+const filter_name_option = "/html/body/div[1]/div/div/section/div[1]/div/div/span[1]/select/optgroup[1]/option[1]";
+const filter_email_option = "/html/body/div[1]/div/div/section/div[1]/div/div/span[1]/select/optgroup[1]/option[2]";
+const filter_label_option = "/html/body/div[1]/div/div/section/div[1]/div/div/span[1]/select/optgroup[1]/option[3]";
+const filter_is_option = "/html/body/div[1]/div/div/section/div[1]/div/div/span[2]/select/option[1]";
+const filter_no_members_match = "/html/body/div[2]/div/main/section/section/div[1]/h4";
+
 
 function fakerText(length) {
   return faker.random.alpha(Number(length));
@@ -70,6 +79,11 @@ Then("I find email member error {string}", async function (error) {
   expect(errorText).to.equal(error);
 });
 
+Then("I enter an empty email member", async function () {
+  let element = await this.driver.$(email_input);
+  return element.setValue("");
+});
+
 When("I add the member label {kraken-string}", async function (label) {
   let element = await this.driver.$(label_textarea);
   return element.setValue(label);
@@ -87,4 +101,44 @@ Then("I find the member label {kraken-string}", async function (label) {
   let element = await this.driver.$(label_textarea);
   let labelText = await element.getValue();
   expect(labelText).to.equal(label);
+});
+
+When("I click Filter", async function () {
+  let element = await this.driver.$(filter_member_span);
+  return element.click();
+});
+
+Then("I filter Name is {kraken-string}", async function (name) {
+  let element = await this.driver.$(filter_name_option);
+  element.click();
+  element = await this.driver.$(filter_is_option);
+  element.click();
+  element = await this.driver.$(filter_member_input);
+  return element.setValue(name);
+});
+
+Then("I filter Email is {kraken-string}", async function (email) {
+  let element = await this.driver.$(filter_email_option);
+  element.click();
+  element = await this.driver.$(filter_is_option);
+  element.click();
+  element = await this.driver.$(filter_member_input);
+  return element.setValue(email);
+});
+
+When("I apply Filter", async function () {
+  let element = await this.driver.$(filter_member_apply);
+  return element.click();
+});
+
+When("I find no members Message {string}", async function (errorMessage) {
+  let element = await this.driver.$(filter_no_members_match);
+  let errorText = await element.getText();
+  expect(errorText).to.equal(errorMessage);
+});
+
+Then("I check {string} rows member table", async function (rows) {
+  let element = await this.driver.$$("/html/body/div[2]/div/main/section/section/div[1]/table/tbody");
+  let tableRows = await element.length;
+  expect(tableRows).to.equal(Number(rows));
 });
