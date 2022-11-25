@@ -1,0 +1,19 @@
+Feature: Members
+
+  @user1 @web
+  Scenario: Como usuario de ghost creo un member con un correo y un label de 10 caracteres
+    Given I navigate to page "<URL_GHOST>"
+    And I wait for 2 seconds
+    And I enter email "<EMAIL>"
+    And I enter password "<PASSWORD>"
+    And I click Sign in
+    And I wait for 2 seconds
+    And I click Members option
+    And I click New member button
+    And I enter random email member "$email_1"
+    And I add the member label "$string_1"
+    Then I save member
+    And I wait for 2 seconds
+    And I click Members option
+    And I find a member "$$email_1"
+    And I find the member label "$$string_1"
