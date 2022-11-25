@@ -8,6 +8,7 @@ const name_input = "/html/body/div[2]/div/main/section/div[2]/form/div/section/d
 const email_input = "/html/body/div[2]/div/main/section/div[2]/form/div/section/div/div[1]/div/div[1]/div[2]/input";
 const note_textarea = "/html/body/div[2]/div/main/section/div[2]/form/div/section/div/div[1]/div/div[3]/textarea";
 const search_members_input = "/html/body/div[2]/div/main/section/div/header/section/div[1]/div/input";
+const members_table = "/html/body/div[2]/div/main/section/section/div[1]/table/tbody";
 const first_member_row_table = "/html/body/div[2]/div/main/section/section/div[1]/table/tbody/tr[1]";
 const note_member_error = "/html/body/div[2]/div/main/section/div[2]/form/div/section/div/div[1]/div/div[3]/p[1]";
 const email_member_error = "/html/body/div[2]/div/main/section/div[2]/form/div/section/div/div[1]/div/div[1]/div[2]/p";
@@ -21,11 +22,50 @@ const filter_name_option = "/html/body/div[1]/div/div/section/div[1]/div/div/spa
 const filter_email_option = "/html/body/div[1]/div/div/section/div[1]/div/div/span[1]/select/optgroup[1]/option[2]";
 const filter_label_option = "/html/body/div[1]/div/div/section/div[1]/div/div/span[1]/select/optgroup[1]/option[3]";
 const filter_is_option = "/html/body/div[1]/div/div/section/div[1]/div/div/span[2]/select/option[1]";
+const filter_is_not_option = "/html/body/div[1]/div/div/section/div[1]/div/div/span[2]/select/option[2]";
+const filter_contains_option = "/html/body/div[1]/div/div/section/div[1]/div/div/span[2]/select/option[2]";
+const filter_does_not_contain_option = "/html/body/div[1]/div/div/section/div[1]/div/div/span[2]/select/option[3]";
+const filter_starts_with_option = "/html/body/div[1]/div/div/section/div[1]/div/div/span[2]/select/option[4]";
+const filter_ends_with_option = "/html/body/div[1]/div/div/section/div[1]/div/div/span[2]/select/option[5]";
 const filter_no_members_match = "/html/body/div[2]/div/main/section/section/div[1]/h4";
 
 
 function fakerText(length) {
   return faker.random.alpha(Number(length));
+}
+
+async function setUpFieldFilter(driver, field) {
+  let element;
+  if ('Name' === field) {
+    element = await driver.$(filter_name_option);
+  } else if ('Email' === field) {
+    element = await driver.$(filter_email_option);
+  } else if ('Label' === field) {
+    element = await driver.$(filter_label_option);
+  } else {
+    console.error('Combinación campo no válido');
+  }
+  return element.click();
+}
+
+async function setUpFilter(driver, filter) {
+  let element;
+  if ('is' === filter) {
+    element = await driver.$(filter_is_option);
+  } else if ('is not' === filter) {
+    element = await driver.$(filter_is_not_option);
+  } else if ('contains' === filter) {
+    element = await driver.$(filter_contains_option);
+  } else if ('does not contain' === filter) {
+    element = await driver.$(filter_does_not_contain_option);
+  } else if ('starts with' === filter) {
+    element = await driver.$(filter_starts_with_option);
+  } else if ('ends with' === filter) {
+    element = await driver.$(filter_ends_with_option);
+  } else {
+    console.error('Combinación filtro no válida');
+  }
+  return element.click();
 }
 
 When("I click New member button", async function () {
@@ -138,7 +178,15 @@ When("I find no members Message {string}", async function (errorMessage) {
 });
 
 Then("I check {string} rows member table", async function (rows) {
-  let element = await this.driver.$$("/html/body/div[2]/div/main/section/section/div[1]/table/tbody");
+  let element = await this.driver.$$(members_table);
   let tableRows = await element.length;
   expect(tableRows).to.equal(Number(rows));
+});
+
+When("I set the filter {string} {string} and set random string of {string} length", async function (field, filter, length) {
+  console.log(field, filter, length);
+  await setUpFieldFilter(this.driver, field);
+  await setUpFilter(this.driver, filter);
+  let element = await this.driver.$(filter_member_input);
+  return element.setValue(fakerText(length));
 });
