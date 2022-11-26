@@ -28,6 +28,8 @@ const filter_does_not_contain_option = "/html/body/div[1]/div/div/section/div[1]
 const filter_starts_with_option = "/html/body/div[1]/div/div/section/div[1]/div/div/span[2]/select/option[4]";
 const filter_ends_with_option = "/html/body/div[1]/div/div/section/div[1]/div/div/span[2]/select/option[5]";
 const filter_no_members_match = "/html/body/div[2]/div/main/section/section/div[1]/h4";
+const add_filter_button = "/html/body/div[1]/div/div/section/div[2]/button";
+const second_filter_member_input = "/html/body/div[1]/div/div/section/div[2]/div/div/input";
 
 
 function fakerText(length) {
@@ -188,5 +190,12 @@ When("I set the filter {string} {string} and set random string of {string} lengt
   await setUpFieldFilter(this.driver, field);
   await setUpFilter(this.driver, filter);
   let element = await this.driver.$(filter_member_input);
+  return element.setValue(fakerText(length));
+});
+
+When("I add a second filter Name is with a random string of {string} length", async function (length) {
+  let element = await this.driver.$(add_filter_button);
+  await element.click();
+  element = await this.driver.$(second_filter_member_input);
   return element.setValue(fakerText(length));
 });
