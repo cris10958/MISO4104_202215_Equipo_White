@@ -1,0 +1,17 @@
+Feature: Newsletter
+
+  @user1 @web
+  Scenario: Como usuario de ghost creo newsletter con nombre de 192 caracteres y verifico el error
+    Given I navigate to page "<URL_GHOST>"
+    And I wait for 2 seconds
+    And I enter email "<EMAIL>"
+    And I enter password "<PASSWORD>"
+    And I click Sign in
+    And I wait for 2 seconds
+    And I click Settings option
+    And I click Email newsletter
+    And I click Add newsletter
+    And I enter "192" random characters on newsletter name
+    Then I click Create newsletter
+    And I wait for 2 seconds
+    And I find name newsletter error "Cannot be longer than 191 characters."
