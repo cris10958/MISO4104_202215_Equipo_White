@@ -28,6 +28,25 @@ function generateData() {
                 type: 'Words',
                 max:  80,
                 min:  60
+            }, {
+                name: 'emailmember',
+                type: 'Email Address'
+            }, {
+                name: 'namemember',
+                type: 'Full Name'
+            }, {
+                name: 'nametag',
+                type: 'Words',
+                max:  3,
+                min:  2
+            }, {
+                name: 'slugtag',
+                type: 'Words',
+                max:  1,
+                min:  1
+            }, {
+                name: 'descriptiontag',
+                type: 'Paragraphs'
             }]
     }).then(function(records) {
             for (var i=0; i<records.length; i++) {
@@ -284,7 +303,7 @@ function iniciar() {
         fs.writeFileSync("115_editarpage.feature.NA", datapooleditpage);
 
     //116. Create Page, Publish and un-publish with Datapool Pseudo
-        value = getRandomInt(0, 19);
+        value = getRandomInt(0, 99);
         page = datapoolpseudo[value];
         let datapoolunpublishpage = `Feature: Create Page, Publish and un-publish with Datapool Pseudo with Mockaroo
         @user1 @web
@@ -328,7 +347,7 @@ function iniciar() {
         fs.writeFileSync("116_unplublishpage.feature.NA", datapoolunpublishpage);
 
     //117. Create Page with Datapool Pseudo with title grether than 255 Char
-        value = getRandomInt(0, 19);
+        value = getRandomInt(0, 99);
         page = datapoolpseudo[value];
         datapoolcreatepage = `Feature: Edit Page with Datapool Pseudo with title grether than 255 Char 
         @user1 @web
@@ -366,4 +385,81 @@ function iniciar() {
         Then I find note creation error "Update failed: Title cannot be longer than 255 characters."
         And I wait for 2 seconds`;
         fs.writeFileSync("117_crearpage.feature.NA", datapoolcreatepage);
+
+    //059. Crear member exitoso with Datapool Pseudo
+        value = getRandomInt(0, 99);
+        member = datapoolpseudo[value];
+        let datapoolcreatemember = `Feature: Create Member with Datapool Pseudo 
+        @user1 @web
+        Scenario: Como usuario de ghost creo un member con solo correo
+        Given I navigate to page "<URL_GHOST>"
+        And I wait for 2 seconds
+        And I enter email "<EMAIL>"
+        And I enter password "<PASSWORD>"
+        And I click Sign in
+        And I wait for 2 seconds
+        And I click Members option
+        And I click New member button
+        And I enter random name member "${member.namemember}"
+        And I enter random email member "${member.emailmember}"
+        Then I save member
+        And I wait for 2 seconds
+        And I click Members option
+        And I find a member "${member.emailmember}"`;
+        fs.writeFileSync("059_member.feature.NA", datapoolcreatemember);
+    
+    //060. Editar member exitoso with Datapool Pseudo
+        value = getRandomInt(0, 99);
+        member = datapoolpseudo[value];
+        let value2 = getRandomInt(0, 99);
+        memberEdit = datapoolpseudo[value2];
+        let datapooleditmember = `Feature: Edit Member with Datapool Pseudo 
+        @user1 @web
+        Scenario: Como usuario de ghost edito un member
+        Given I navigate to page "<URL_GHOST>"
+        And I wait for 2 seconds
+        And I enter email "<EMAIL>"
+        And I enter password "<PASSWORD>"
+        And I click Sign in
+        And I wait for 2 seconds
+        And I click Members option
+        And I click New member button
+        And I enter random name member "${member.namemember}"
+        And I enter random email member "${member.emailmember}"
+        And I save member
+        And I wait for 2 seconds
+        And I click Members option
+        And I find a member "${member.emailmember}"
+        Then I enter random email member "${memberEdit.emailmember}"
+        And I save member
+        And I wait for 2 seconds
+        And I click Members option
+        And I find a member "${memberEdit.emailmember}"`;
+        fs.writeFileSync("060_member.feature.NA", datapooleditmember);
+
+    //061. Crear Tag exitoso with Datapool Pseudo
+        value = getRandomInt(0, 99);
+        tag = datapoolpseudo[value];
+
+        let datapoolcreatetag = `Feature: Crer Tag with Datapool Pseudo 
+        @user1 @web
+        Scenario: Como usuario de ghost creo un nuevo tag
+        Given I navigate to page "<URL_GHOST>"
+        And I wait for 2 seconds
+        And I enter email "<EMAIL>"
+        And I enter password "<PASSWORD>"
+        And I click Sign in
+        And I wait for 2 seconds
+        And I click Tags option pseudo
+        And I wait for 2 seconds
+        And I click New Tag pseudo
+        And I fill form tag name pseudo "${tag.nametag}"
+        And I fill form tag slug pseudo "${tag.slugtag}"
+        And I fill form tag description pseudo "${tag.descriptiontag}"
+        Then I save the tag pseudo
+        And I wait for 2 seconds
+        And I click Tags option pseudo
+        And I wait for 3 seconds`;
+        fs.writeFileSync("061_creartag.feature.NA", datapoolcreatetag);
+
 }

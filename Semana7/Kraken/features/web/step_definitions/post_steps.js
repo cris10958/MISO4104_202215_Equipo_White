@@ -115,3 +115,40 @@ Then("I find note creation error {string}", async function (error) {
     // console.error('el error es: ' + error);
     expect(errorText).to.equal(error);
   });
+
+
+  When("I click Tags option pseudo", async function () {
+    let element = await this.driver.$(
+      ".gh-nav-top > ul:nth-child(2) > li:nth-child(3)"
+    );
+    return element.click();
+  });
+  
+  When("I click New Tag pseudo", async function () {
+    let element = await this.driver.$(
+      ".view-actions > .ember-view.gh-btn.gh-btn-primary"
+    );
+    return element.click();
+  });
+  
+  When("I fill form tag name pseudo {string}", async function (tagName) {
+    let element = await this.driver.$("//*[@id='tag-name']");
+    return element.setValue(tagName);
+  });
+
+  When("I fill form tag slug pseudo {string}", async function (tagName) {
+    let element = await this.driver.$("//*[@id='tag-slug']");
+    return element.setValue(tagName);
+  });
+
+  When("I fill form tag description pseudo {string}", async function (tagName) {
+    let element = await this.driver.$("//*[@id='tag-description']");
+    return element.setValue(tagName);
+  });
+  
+  Then("I save the tag pseudo", async function () {
+    let element = await this.driver.$(
+      ".gh-btn.gh-btn-primary.gh-btn-icon.ember-view"
+    );
+    return element.click();
+  });
