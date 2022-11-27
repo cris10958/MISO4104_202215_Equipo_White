@@ -2,13 +2,22 @@ const { When, Then  } = require("@cucumber/cucumber");
 const expect = require('chai').expect;
 
 When("I open post", async function(){
-    //let  element = this.driver.$('.gh-nav-list.gh-nav-manage>li:nth-child(1)')
     let  element = this.driver.$('/html/body/div[2]/div/nav[1]/div/section/div[1]/ul[2]/li[1]/a[1]')
+    return await element.click();
+});
+
+When('I click button page', async function () {
+    let element = await this.driver.$('/html/body/div[2]/div/nav[1]/div/section/div[1]/ul[2]/li[2]/a');
     return await element.click();
 });
 
 When("I click new post", async function(){
     let  element = this.driver.$('.ember-view.gh-btn.gh-btn-primary.view-actions-top-row')
+    return await element.click();
+});
+
+When('I click button new page', async function () {
+    let element = await this.driver.$('.ember-view.gh-btn.gh-btn-primary.view-actions-top-row');
     return await element.click();
 });
 
@@ -21,6 +30,17 @@ When('I enter titulo post {kraken-string}', async function (titulo) {
     let element = await this.driver.$('.gh-editor-title.ember-text-area.gh-input.ember-view');
     return await element.setValue(titulo);
 });
+
+When('I enter description {kraken-string}', async function (description) {
+    let element = await this.driver.$('.koenig-editor__editor.__mobiledoc-editor.__has-no-content');
+    return await element.setValue(description);
+});
+
+When('I enter titulo {kraken-string}', async function (titulo) {
+    let element = await this.driver.$('.gh-editor-title.ember-text-area.gh-input.ember-view');
+    return await element.setValue(titulo);
+});
+
 
 When("I click Publish", async function(){
     let  element = this.driver.$('.gh-btn.gh-btn-editor.darkgrey.gh-publish-trigger')
@@ -37,12 +57,22 @@ When("I click publish post right now", async function(){
     return await element.click();
 });
 
+When("I click publish right now", async function(){
+    let  element = this.driver.$('.gh-btn.gh-btn-large.gh-btn-pulse.ember-view')
+    return await element.click();
+});
+
 When("I click back editor", async function(){
     let  element = this.driver.$('.gh-btn-editor.gh-publish-back-button')
     return await element.click();
 });
 
 When("I click back post", async function(){
+    let  element = this.driver.$('.ember-view.gh-btn-editor.gh-editor-back-button')
+    return await element.click();
+});
+
+When("I click back", async function(){
     let  element = this.driver.$('.ember-view.gh-btn-editor.gh-editor-back-button')
     return await element.click();
 });

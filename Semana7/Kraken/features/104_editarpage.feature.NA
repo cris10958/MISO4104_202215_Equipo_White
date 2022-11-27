@@ -1,0 +1,35 @@
+Feature: Create Page and Edit with Datapool A-priori 
+    @user1 @web
+    Scenario: Como administrador de la aplicación Ghost realizo el login, la creación, publicación y edición de un page
+    Given I navigate to page "<URL_GHOST>"
+    And I wait for 2 seconds
+    And I enter email "<EMAIL>"
+    And I enter password "<PASSWORD>"
+    And I click Sign in
+    And I wait for 2 seconds
+    When I click button page
+    And I wait for 1 seconds
+    When I click button new page
+    And I wait for 1 seconds
+    When I enter titulo "Et provident et in explicabo."
+    And I wait for 1 seconds
+    When I enter description "Non qui nemo neque. Nihil officiis eos placeat voluptatibus ut sit qui. Quo exercitationem rerum autem consequatur. Quis asperiores id ex eaque quis. Nemo a et eaque distinctio iure sunt."
+    And I wait for 2 seconds
+    When I click Publish
+    And I wait for 2 seconds
+    When I click Continue final review
+    And I wait for 1 seconds
+    When I click publish right now
+    And I wait for 3 seconds
+    When I click back editor
+    And I wait for 1 seconds
+    When I click back
+    And I wait for 1 seconds
+    When I open edition
+    And I wait for 1 seconds
+    Then I enter titulo "Debitis quam non corporis consequatur sed ratione deserunt."
+    And I wait for 1 seconds
+    When I update
+    And I wait for 4 seconds
+    Then I click back
+    And I wait for 5 seconds

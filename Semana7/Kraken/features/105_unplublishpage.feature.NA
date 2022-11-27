@@ -1,0 +1,39 @@
+Feature: Create Page, Publish and un-publish with Datapool A-priori
+    @user1 @web
+    Scenario: Como administrador de la aplicación Ghost realizo el login, la creación, publicación y despublicar un Page
+    Given I navigate to page "<URL_GHOST>"
+    And I wait for 2 seconds
+    And I enter email "<EMAIL>"
+    And I enter password "<PASSWORD>"
+    And I click Sign in
+    And I wait for 1 seconds
+    When I click button page
+    And I wait for 1 seconds
+    When I click button new page
+    And I wait for 1 seconds
+    When I enter titulo "Sunt soluta aut minima rerum consequatur consequuntur consequatur quaerat."
+    And I wait for 1 seconds
+    When I enter description "Blanditiis quia ut. Ullam dicta necessitatibus aut soluta et ut qui sint et. Ut ea cum."
+    And I wait for 2 seconds
+    When I click Publish
+    And I wait for 2 seconds
+    When I click Continue final review
+    And I wait for 1 seconds
+    When I click publish right now
+    And I wait for 3 seconds
+    When I click back editor
+    And I wait for 1 seconds
+    When I click back
+    And I wait for 1 seconds
+    When I open edition
+    And I wait for 1 seconds
+    When I unpublish
+    And I wait for 2 seconds
+    When I confirm unpublish
+    And I wait for 2 seconds
+    When I click back
+    And I wait for 2 seconds
+    When I select unpublish
+    And I wait for 2 seconds
+    Then I click back
+    And I wait for 5 seconds

@@ -11,7 +11,7 @@ Feature: Create Post with Datapool A-priori
     And I wait for 1 seconds
     When I click new post
     And I wait for 1 seconds
-    When I enter description post "Sed officiis voluptas tempora reprehenderit accusamus molestiae voluptatem iste velit. Perspiciatis aspernatur qui tenetur. Iusto odit necessitatibus."
+    When I enter description post "Quaerat quis odit ducimus ut aut atque architecto impedit autem. Est commodi ipsam doloribus ex odio soluta voluptatem. Aliquid quo voluptatem iusto provident sit nisi dolores explicabo nobis."
     And I wait for 2 seconds
     When I click Publish
     And I wait for 2 seconds

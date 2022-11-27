@@ -1,0 +1,27 @@
+Feature: Create Page with Datapool A-priori 
+    @user1 @web
+    Scenario: Como usuario quiero crear un Page en la plataforma
+    Given I navigate to page "<URL_GHOST>"
+    And I wait for 2 seconds
+    And I enter email "<EMAIL>"
+    And I enter password "<PASSWORD>"
+    And I click Sign in
+    And I wait for 2 seconds
+    When I click button page
+    And I wait for 1 seconds
+    When I click button new page
+    And I wait for 1 seconds
+    When I enter titulo "Ut accusamus perspiciatis."
+    And I wait for 1 seconds
+    When I enter description "Quo est aperiam modi cumque et eos dolor ipsum aut. Similique nihil quos magnam beatae quas. Atque omnis nihil fugiat enim. Et aut beatae veniam consectetur id minus sed autem perspiciatis. Expedita non delectus alias qui mollitia explicabo aspernatur iste."
+    And I wait for 2 seconds
+    When I click Publish
+    And I wait for 2 seconds
+    When I click Continue final review
+    And I wait for 1 seconds
+    When I click publish right now
+    And I wait for 3 seconds
+    When I click back editor
+    And I wait for 1 seconds
+    Then I click back
+    And I wait for 10 seconds
