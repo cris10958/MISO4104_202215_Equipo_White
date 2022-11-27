@@ -18,7 +18,7 @@ function fakerText(length) {
 }
 
 async function findNewsletter(driver, nameNewsletter) {
-  for (let index = 1; index < 10; index++) {
+  for (let index = 1; index < 200; index++) {
     let xpath = `/html/body/div[2]/div/main/section/section/div/div/section/div/div/div[${index}]/div/a/h3`;
     let element = await driver.$(xpath);
     if (element) {

@@ -1,0 +1,35 @@
+Feature: Edit Page with Datapool Pseudo with title grether than 255 Char 
+        @user1 @web
+        Scenario: Como usuario quiero editar un page en la plataforma con un titulo de mas de 255 char
+        Given I navigate to page "<URL_GHOST>"
+        And I wait for 2 seconds
+        And I enter email "<EMAIL>"
+        And I enter password "<PASSWORD>"
+        And I click Sign in
+        And I wait for 2 seconds
+        When I click button page
+        And I wait for 1 seconds
+        When I click button new page
+        And I wait for 1 seconds
+        When I enter titulo "​"
+        And I wait for 1 seconds
+        When I enter description "Unspecified injury of muscle, fascia and tendon of triceps, left arm"
+        And I wait for 2 seconds
+        When I click Publish
+        And I wait for 2 seconds
+        When I click Continue final review
+        And I wait for 1 seconds
+        When I click publish right now
+        And I wait for 3 seconds
+        When I click back editor
+        And I wait for 1 seconds
+        When I click back
+        And I wait for 1 seconds
+        When I open edition
+        And I wait for 1 seconds
+        Then I enter titulo "integer ac neque duis bibendum morbi non quam nec dui luctus rutrum nulla tellus in sagittis dui vel nisl duis ac nibh fusce lacus purus aliquet at feugiat non pretium quis lectus suspendisse potenti in eleifend quam a odio in hac habitasse platea dictumst maecenas ut massa quis augue luctus tincidunt nulla mollis molestie lorem quisque ut erat curabitur gravida nisi at nibh in"
+        And I wait for 1 seconds
+        When I update
+        And I wait for 4 seconds
+        Then I find note creation error "Update failed: Title cannot be longer than 255 characters."
+        And I wait for 2 seconds

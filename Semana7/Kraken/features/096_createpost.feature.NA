@@ -1,0 +1,27 @@
+Feature: Create Post with Datapool Pseudo with Mockaroo 
+        @user1 @web
+        Scenario: Como usuario quiero crear un post en la plataforma
+        Given I navigate to page "<URL_GHOST>"
+        And I wait for 2 seconds
+        And I enter email "<EMAIL>"
+        And I enter password "<PASSWORD>"
+        And I click Sign in
+        And I wait for 2 seconds
+        When I open post
+        And I wait for 1 seconds
+        When I click new post
+        And I wait for 1 seconds
+        When I enter titulo post "1.00"
+        And I wait for 1 seconds
+        When I enter description post "Animal-rider injured in unspecified transport accident, subsequent encounter"
+        And I wait for 2 seconds
+        When I click Publish
+        And I wait for 2 seconds
+        When I click Continue final review
+        And I wait for 1 seconds
+        When I click publish post right now
+        And I wait for 3 seconds
+        When I click back editor
+        And I wait for 1 seconds
+        Then I click back post
+        And I wait for 10 seconds
