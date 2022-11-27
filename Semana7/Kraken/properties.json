@@ -1,5 +1,7 @@
 {
     "URL_GHOST": "http://localhost:2368/ghost/#/signin",
-    "EMAIL": "a.benitezm@uniandes.edu.co",
-    "PASSWORD": "TQ2uKv*$rR3Sa5!"
+    "URL_CREATE_ACCOUNT": "http://localhost:2368/ghost/#/setup",
+    "BEFORE_SLUG_PROFILE": "http://localhost:2368/author/",
+    "EMAIL": "ingdaos@gmail.com",
+    "PASSWORD": "Desarrollador123456"
 }
