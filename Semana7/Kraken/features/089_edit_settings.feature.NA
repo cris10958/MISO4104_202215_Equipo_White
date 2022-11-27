@@ -1,0 +1,16 @@
+Feature: Editar la configuración de la aplicación
+
+@user1 @web
+Scenario Outline: Como administrador de la aplicación Ghost edito la configuración de la página
+  Given I navigate to page "<URL_GHOST>"
+  And I wait for 2 seconds
+  When I enter email "<EMAIL>"
+  When I enter password "<PASSWORD>"
+  And I click Sign in
+  And I wait for 3 seconds
+  And I open settings
+  And I open general settings
+  And I open Facebook card setting
+  And I enter Facebook title setting top length
+  And I clic save settings
+  Then I validate bug alert "Validation error, cannot edit setting. ValidationError: Value in [settings.og_title] exceeds maximum length of 300 characters."
