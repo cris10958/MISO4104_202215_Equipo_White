@@ -1,0 +1,13 @@
+Feature: Login
+
+  @user1 @web
+  Scenario: Como usuario de ghost quiero hacer login con correo muy corto y contrasena valida
+    Given I navigate to page "<URL_GHOST>"
+    And I wait for 1 seconds
+    And I enter email "x@c.co"
+    And I wait for 1 seconds
+    And I enter random password "<PASSWORD>"
+    And I wait for 1 seconds
+    And I click Sign in
+    And I wait for 1 seconds
+    Then I see the error There is no user with that email address. 
