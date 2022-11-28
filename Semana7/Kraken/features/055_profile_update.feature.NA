@@ -1,0 +1,20 @@
+Feature: profile update
+
+  @user1 @web
+  Scenario: Como usuario de ghost quiero actualizar la contrasena del perfil solo con el campo de contrasena actual y usando cualquier contrasena
+    Given I navigate to page "<URL_GHOST>"
+    And I wait for 1 seconds
+    And I enter random email "<EMAIL>"
+    And I enter random password "<PASSWORD>"
+    And I wait for 1 seconds
+    And I click Sign in
+    And I click user menu
+    And I click user profile
+    And I wait for 1 seconds
+    And I fill old password with "11" length string
+    And I wait for 1 seconds
+    And I click change password button
+    And I wait for 1 seconds
+    Then I see new password error "Sorry, passwords can't be blank"
+
+
