@@ -1,5 +1,46 @@
 # Proyecto Pruebas automatizadas
 
+## Semana 7: Generación de Datos
+
+### Prerequisitos: 
+Las pruebas se hicieron con las siguientes versiones, asegurese de tener estas versiones antes de ejecutar las pruebas:
+* Ghost version: 5.18.0
+* node 14.17.0
+* npm 6.14.13
+* cucumber 7.2.1
+* kraken-node 1.0.24
+
+Una vez descargada la carpeta del repositorio, realizar la instalación de dependencias:
+  ```
+  npm install
+  npm install mockaroo
+  ```
+
+Para la generación correcta de algunos scripts que se utilizaron en el proyecto, se debe ejecutar el generado de escenarios de la siguiente manera:
+```
+cd MISO4104_202215_Equipo_White/Semana7/Kraken/features
+node generateScenarios-apriori.js
+node generateScenarios-pseudo.js
+```
+En el Wiki de la semana 7 se explica que hace cada uno de estos scripts dinamicos y que tecnica de generación de datos aleatorios apoyan.
+
+El paso siguiente es modificar el archivo properties.json, con las credenciales de acceso al panel de administrador de GHOST, se debe tener en cuenta que estos datos son especificos y determinados para la ejecución de las pruebas e2e de este escenario.
+
+![image](https://user-images.githubusercontent.com/111475768/204167443-eaabf4a1-2b71-458d-9140-27034d06f196.png)
+
+Debido a la restricción de la herramienta Kraken en Windows, se debe seleccionar solo un archivo con un escenario en la carpeta features\ y asegurar que solo un archivo tenga la extensión .feature. Todos los archivos restantes se han publicado con la extension .NA para renombrarlos cada que probemos algun escenario.
+![image](https://user-images.githubusercontent.com/111475768/204167351-52cb1519-6fdc-491f-a538-782bad916d4d.png)
+
+
+Por ultimo, se debe ejecutar la prueba con Kraken desde la misma ruta del archivo package.json del proyecto de la siguiente manera:
+
+```
+  ./node_modules/kraken-node/bin/kraken-node run
+```
+![image](https://user-images.githubusercontent.com/111475768/204167252-c50eeb68-ea68-4f09-b2ec-b5b0edd7907c.png)
+
+
+
 ## Semana 6: Pruebas de regresión visual
 
 ### Prerequisitos: 
