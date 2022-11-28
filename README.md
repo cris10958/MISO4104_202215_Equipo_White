@@ -40,6 +40,8 @@ Por ultimo, se debe ejecutar la prueba con Kraken desde la misma ruta del archiv
 ![image](https://user-images.githubusercontent.com/111475768/204167252-c50eeb68-ea68-4f09-b2ec-b5b0edd7907c.png)
 
 
+Para ver el detalle de las tecnicas utilizadas y los escenarios, puede dirigirse a la wiki de la [Semana 7](https://github.com/cris10958/MISO4104_202215_Equipo_White/wiki/s7_datos)
+
 
 ## Semana 6: Pruebas de regresión visual
 
