@@ -30,7 +30,40 @@ Una vez descargada la carpeta del repositorio, realizar la instalación de depen
   npm install
   ```
 
+### Instrucciones:
+La Ejecución de estos productos esta basada en la estrategia de pruebas planteada para esta fase final, la cual se detalla en la wiki de esta semana. las instrucciones de ejecuccion de cada producto son:
 
+#### Pruebas de Exploración sistematica con RIPuppet
+```
+cd MISO4104_202215_Equipo_White/Semana8/RIPuppetV1
+node index.js
+```
+
+#### Pruebas E2E con Kraken
+```
+cd MISO4104_202215_Equipo_White/Semana8/Kraken_e2e
+./node_modules/kraken-node/bin/kraken-node run
+```
+
+#### Pruebas VRT con Resemble.js con una versión 3.42 de Ghost
+```
+cd MISO4104_202215_Equipo_White/Semana8/Kraken3.42_e2e
+./node_modules/kraken-node/bin/kraken-node run
+cd MISO4104_202215_Equipo_White/Semana8/Kraken3.42_e2ee/reports
+copiar las imagenes de cada escenario a MISO4104_202215_Equipo_White\Semana8\Resemblejs\results\screenshots V1
+
+cd MISO4104_202215_Equipo_White/Semana8/Kraken_e2e/reports
+copiar las imagenes de cada escenario a MISO4104_202215_Equipo_White\Semana8\Resemblejs\results\screenshots V2
+
+cd MISO4104_202215_Equipo_White/Semana8/Resemblejs
+node index.js
+```
+
+#### Pruebas E2E con escenarios de validación de datos aleatorios con Kraken
+```
+cd MISO4104_202215_Equipo_White/Semana8/Kraken_datapool/
+./node_modules/kraken-node/bin/kraken-node run
+```
 
 ## Semana 7: Generación de Datos
 
