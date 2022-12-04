@@ -113,7 +113,7 @@ Then("I find note creation error {string}", async function (error) {
     // console.error('el elemento es: ' + element);
     // console.error('el errorText es: ' + errorText);
     // console.error('el error es: ' + error);
-    expect(errorText).to.equal(error);
+    expect(errorText).contains(error);
   });
 
 

@@ -119,7 +119,7 @@ When('I enter Twitter title top length', async function () {
 When('I validate bug alert {string}', async function (error) {
     let element = await this.driver.$('.gh-alerts');
     let result =await element.getText();
-    return expect(result).to.equal(error);
+    return expect(result).contains(error);
 });
 
 When('I enter Twitter description top length', async function () {
