@@ -27,7 +27,7 @@ Feature: Create Post and Edit with Datapool Pseudo with Mockaroo
         And I wait for 1 seconds
         When I open edition
         And I wait for 1 seconds
-        Then I edit titulo post "NULL"
+        Then I edit titulo post "sjwidjiejdkskdfjjkjlkj"
         And I wait for 1 seconds
         When I update
         And I wait for 4 seconds
