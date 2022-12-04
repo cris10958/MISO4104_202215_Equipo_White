@@ -1,0 +1,10 @@
+{
+    "url": "http://localhost:2368/ghost/",
+    "loginPage": "http://localhost:2368/ghost/#/signin",
+    "headless": true,
+    "depthLevels": 1,
+    "inputValues": false,
+    "values": {"userIdentification": "a.benitezm@uniandes.edu.co",
+        "userPassword": "TQ2uKv*$rR3Sa5!"},
+    "browsers": ["chromium"]
+}
