@@ -2,9 +2,9 @@ Feature: Crear una nueva pagina
 
 @user1 @web
 Scenario: Como administrador de la aplicación Ghost realizo el login, la creación, publicación y eliminación de un post
-  Given I navigate to page "http://localhost:2369/ghost/#/signin"
+  Given I navigate to page "http://localhost:2368/ghost/#/signin"
   And I wait for 2 seconds
-  When I enter email "<USERNAME>"
+  When I enter email "<EMAIL>"
   And I wait for 1 seconds
   When I enter password "<PASSWORD>"
   And I wait for 1 seconds
