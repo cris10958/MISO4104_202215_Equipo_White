@@ -6,4 +6,4 @@ Feature: Login
     And I wait for 1 seconds
     And I click Sign in
     And I wait for 1 seconds
-    Then I see the error "Please fill out the form to sign in."
+    Then I see the error Please fill out the form to sign in.

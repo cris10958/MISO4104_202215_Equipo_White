@@ -4,7 +4,7 @@ Feature: Login
   Scenario: Como usuario de ghost quiero hacer login sin email y cualquier contrasena
     Given I navigate to page "<URL_GHOST>"
     And I wait for 1 seconds
-    And I enter email ""
+    And I enter empty email
     And I wait for 1 seconds
     And I enter random password "$name_1"
     And I wait for 1 seconds

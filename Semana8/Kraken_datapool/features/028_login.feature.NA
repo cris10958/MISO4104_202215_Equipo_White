@@ -6,7 +6,7 @@ Feature: Login
     And I wait for 1 seconds
     And I enter random email "<EMAIL>"
     And I wait for 1 seconds
-    And I enter password ""
+    And I enter empty password
     And I wait for 1 seconds
     And I click Sign in
     And I wait for 1 seconds
