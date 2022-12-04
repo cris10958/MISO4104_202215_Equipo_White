@@ -1,5 +1,70 @@
 # Proyecto Pruebas automatizadas
 
+## Semana 8: Estrategia de Pruebas Final
+
+### Prerequisitos: 
+Las pruebas se hicieron con las siguientes versiones, asegurese de tener estas versiones antes de ejecutar las pruebas:
+* Ghost version: 5.18.0
+* node 14.17.0
+* npm 6.14.13
+* cucumber 7.2.1
+* kraken-node 1.0.24
+* ripuppet 1.0.0
+
+Una vez descargada la carpeta del repositorio, realizar la instalación de dependencias por cada una de las carpetas de la semana 8:
+
+![image](https://user-images.githubusercontent.com/111475768/205475311-c8e8f7fc-123d-4d8e-86a6-23527112ff43.png)
+
+  ```
+  cd Kraken_e2e/
+  npm install
+  
+  cd ../Kraken_datapool/
+  npm install
+  npm install mockaroo
+  
+  cd ../RIPuppetV1/
+  npm install
+  
+  cd ../Resemblejs/
+  npm install
+  ```
+
+### Instrucciones:
+La Ejecución de estos productos esta basada en la estrategia de pruebas planteada para esta fase final, la cual se detalla en la wiki de esta semana. las instrucciones de ejecuccion de cada producto son:
+
+#### Pruebas de Exploración sistematica con RIPuppet
+```
+cd MISO4104_202215_Equipo_White/Semana8/RIPuppetV1
+node index.js
+```
+
+#### Pruebas E2E con Kraken
+```
+cd MISO4104_202215_Equipo_White/Semana8/Kraken_e2e
+./node_modules/kraken-node/bin/kraken-node run
+```
+
+#### Pruebas VRT con Resemble.js con una versión 3.42 de Ghost
+```
+cd MISO4104_202215_Equipo_White/Semana8/Kraken3.42_e2e
+./node_modules/kraken-node/bin/kraken-node run
+cd MISO4104_202215_Equipo_White/Semana8/Kraken3.42_e2ee/reports
+copiar las imagenes de cada escenario a MISO4104_202215_Equipo_White\Semana8\Resemblejs\results\screenshots V1
+
+cd MISO4104_202215_Equipo_White/Semana8/Kraken_e2e/reports
+copiar las imagenes de cada escenario a MISO4104_202215_Equipo_White\Semana8\Resemblejs\results\screenshots V2
+
+cd MISO4104_202215_Equipo_White/Semana8/Resemblejs
+node index.js
+```
+
+#### Pruebas E2E con escenarios de validación de datos aleatorios con Kraken
+```
+cd MISO4104_202215_Equipo_White/Semana8/Kraken_datapool/
+./node_modules/kraken-node/bin/kraken-node run
+```
+
 ## Semana 7: Generación de Datos
 
 ### Prerequisitos: 

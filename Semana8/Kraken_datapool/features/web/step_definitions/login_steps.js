@@ -17,9 +17,19 @@ When("I enter random email {kraken-string}", async function (email) {
     return element.setValue(email);
 });
 
-When("I enter email {string}", function (email) {
+When("I enter email {kraken-string}", function (email) {
     let element = this.driver.$("/html/body/div[2]/div/main/div[1]/div/section/form/div[1]/span/input");
     return element.setValue(email);
+});
+
+When("I enter empty email", function () {
+    let element = this.driver.$("/html/body/div[2]/div/main/div[1]/div/section/form/div[1]/span/input");
+    return element.setValue("");
+});
+
+When("I enter empty password", function () {
+    let element = this.driver.$("/html/body/div[2]/div/main/div[1]/div/section/form/div[1]/span/input");
+    return element.setValue("");
 });
 
 When("I enter random password {kraken-string}", async function (password) {
@@ -27,7 +37,7 @@ When("I enter random password {kraken-string}", async function (password) {
     return element.setValue(password);
 });
 
-When("I enter password {string}", function (password) {
+When("I enter password {kraken-string}", function (password) {
     let element = this.driver.$("/html/body/div[2]/div/main/div[1]/div/section/form/div[2]/span/input");
     return element.setValue(password);
 });

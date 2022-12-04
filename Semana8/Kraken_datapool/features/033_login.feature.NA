@@ -10,4 +10,4 @@ Feature: Login
     And I wait for 1 seconds
     And I click Sign in
     And I wait for 1 seconds
-    Then I see the error Your password is incorrect. 
+    Then I see the error Your password is incorrect.
