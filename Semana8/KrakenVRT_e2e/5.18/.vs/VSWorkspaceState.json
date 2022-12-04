@@ -1,0 +1,12 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\.kraken",
+    "\\features",
+    "\\features\\web",
+    "\\features\\web\\step_definitions",
+    "\\features\\web\\support"
+  ],
+  "SelectedNode": "\\features\\web\\step_definitions\\step.js",
+  "PreviewInSolutionExplorer": false
+}
