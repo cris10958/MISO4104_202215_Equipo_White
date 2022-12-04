@@ -1,5 +1,37 @@
 # Proyecto Pruebas automatizadas
 
+## Semana 8: Estrategia de Pruebas Final
+
+### Prerequisitos: 
+Las pruebas se hicieron con las siguientes versiones, asegurese de tener estas versiones antes de ejecutar las pruebas:
+* Ghost version: 5.18.0
+* node 14.17.0
+* npm 6.14.13
+* cucumber 7.2.1
+* kraken-node 1.0.24
+* ripuppet 1.0.0
+
+Una vez descargada la carpeta del repositorio, realizar la instalación de dependencias por cada una de las carpetas de la semana 8:
+
+![image](https://user-images.githubusercontent.com/111475768/205475311-c8e8f7fc-123d-4d8e-86a6-23527112ff43.png)
+
+  ```
+  cd Kraken_e2e/
+  npm install
+  
+  cd ../Kraken_datapool/
+  npm install
+  npm install mockaroo
+  
+  cd ../RIPuppetV1/
+  npm install
+  
+  cd ../Resemblejs/
+  npm install
+  ```
+
+
+
 ## Semana 7: Generación de Datos
 
 ### Prerequisitos: 
