@@ -53,12 +53,14 @@ cd MISO4104_202215_Equipo_White/Semana8/Kraken_e2e
 
 #### Pruebas VRT con Resemble.js con una versión 3.42 de Ghost
 ```
-cd MISO4104_202215_Equipo_White/Semana8/Kraken3.42_e2e
+cd MISO4104_202215_Equipo_White/Semana8/KrakenVRT_e2e/3.42
 ./node_modules/kraken-node/bin/kraken-node run
-cd MISO4104_202215_Equipo_White/Semana8/Kraken3.42_e2ee/reports
+cd MISO4104_202215_Equipo_White/Semana8/KrakenVRT_e2e/3.42/reports
 copiar las imagenes de cada escenario a MISO4104_202215_Equipo_White\Semana8\Resemblejs\results\screenshots V1
 
-cd MISO4104_202215_Equipo_White/Semana8/Kraken_e2e/reports
+cd MISO4104_202215_Equipo_White/Semana8/KrakenVRT_e2e/5.18
+./node_modules/kraken-node/bin/kraken-node run
+cd MISO4104_202215_Equipo_White/Semana8/KrakenVRT_e2e/5.18/reports
 copiar las imagenes de cada escenario a MISO4104_202215_Equipo_White\Semana8\Resemblejs\results\screenshots V2
 
 cd MISO4104_202215_Equipo_White/Semana8/Resemblejs
