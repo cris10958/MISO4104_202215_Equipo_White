@@ -13,7 +13,7 @@ Las pruebas se hicieron con las siguientes versiones, asegurese de tener estas v
 
 Una vez descargada la carpeta del repositorio, realizar la instalación de dependencias por cada una de las carpetas de la semana 8:
 
-![image](https://user-images.githubusercontent.com/111475768/205475311-c8e8f7fc-123d-4d8e-86a6-23527112ff43.png)
+![image](https://user-images.githubusercontent.com/111475768/205493873-5f72af6f-9d0e-40fd-bf18-4f71cd36e5b3.png)
 
   ```
   cd Kraken_e2e/
@@ -27,6 +27,9 @@ Una vez descargada la carpeta del repositorio, realizar la instalación de depen
   npm install
   
   cd ../Resemblejs/
+  npm install
+  
+  cd ../Kraken3.42_e2e/
   npm install
   ```
 
