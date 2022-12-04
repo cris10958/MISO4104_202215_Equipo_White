@@ -5,6 +5,7 @@
 ### Prerequisitos: 
 Las pruebas se hicieron con las siguientes versiones, asegurese de tener estas versiones antes de ejecutar las pruebas:
 * Ghost version: 5.18.0
+* Ghost version: 3.42.0 para VRT
 * node 14.17.0
 * npm 6.14.13
 * cucumber 7.2.1
@@ -13,7 +14,7 @@ Las pruebas se hicieron con las siguientes versiones, asegurese de tener estas v
 
 Una vez descargada la carpeta del repositorio, realizar la instalación de dependencias por cada una de las carpetas de la semana 8:
 
-![image](https://user-images.githubusercontent.com/111475768/205493873-5f72af6f-9d0e-40fd-bf18-4f71cd36e5b3.png)
+![image](https://user-images.githubusercontent.com/111475768/205495327-ed071514-12cc-47c3-98ba-dc1f32c2c751.png)
 
   ```
   cd Kraken_e2e/
@@ -29,7 +30,9 @@ Una vez descargada la carpeta del repositorio, realizar la instalación de depen
   cd ../Resemblejs/
   npm install
   
-  cd ../Kraken3.42_e2e/
+  cd ../KrakenVRT_e2e/3.42
+  npm install
+  cd ../KrakenVRT_e2e/5.18
   npm install
   ```
 
@@ -50,12 +53,14 @@ cd MISO4104_202215_Equipo_White/Semana8/Kraken_e2e
 
 #### Pruebas VRT con Resemble.js con una versión 3.42 de Ghost
 ```
-cd MISO4104_202215_Equipo_White/Semana8/Kraken3.42_e2e
+cd MISO4104_202215_Equipo_White/Semana8/KrakenVRT_e2e/3.42
 ./node_modules/kraken-node/bin/kraken-node run
-cd MISO4104_202215_Equipo_White/Semana8/Kraken3.42_e2ee/reports
+cd MISO4104_202215_Equipo_White/Semana8/KrakenVRT_e2e/3.42/reports
 copiar las imagenes de cada escenario a MISO4104_202215_Equipo_White\Semana8\Resemblejs\results\screenshots V1
 
-cd MISO4104_202215_Equipo_White/Semana8/Kraken_e2e/reports
+cd MISO4104_202215_Equipo_White/Semana8/KrakenVRT_e2e/5.18
+./node_modules/kraken-node/bin/kraken-node run
+cd MISO4104_202215_Equipo_White/Semana8/KrakenVRT_e2e/5.18/reports
 copiar las imagenes de cada escenario a MISO4104_202215_Equipo_White\Semana8\Resemblejs\results\screenshots V2
 
 cd MISO4104_202215_Equipo_White/Semana8/Resemblejs
