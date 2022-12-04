@@ -1,0 +1,14 @@
+Feature: Crear un tag
+
+@user1 @web
+Scenario Outline: Como administrador de la aplicación Ghost realizo la creación de un tag
+  Given I navigate to page "<URL_GHOST>"
+  And I wait for 2 seconds
+  When I enter email "<EMAIL>"
+  When I enter password "<PASSWORD>"
+  And I click Sign in
+  And I wait for 3 seconds
+  And I clic tag
+  And I clic new tag
+  And I clic save tag
+  Then I validate bug name tag "You must specify a name for the tag."

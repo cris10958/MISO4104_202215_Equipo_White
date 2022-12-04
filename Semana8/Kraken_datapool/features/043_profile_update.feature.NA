@@ -1,0 +1,23 @@
+Feature: profile update
+
+  @user1 @web
+  Scenario: Como usuario de ghost quiero actualizar el nombre del perfil con string menor igual a 192 caracteres
+    Given I navigate to page "<URL_GHOST>"
+    And I wait for 1 seconds
+    And I enter random email "<EMAIL>"
+    And I enter random password "<PASSWORD>"
+    And I wait for 1 seconds
+    And I click Sign in
+    And I click user menu
+    And I click user profile
+    And I wait for 1 seconds
+    And I fill name with "191" length string
+    And I wait for 1 seconds
+    And I save profile changes
+    And I wait for 1 seconds
+    Then I see the profile page
+    And I fill name with "12" length string
+    And I wait for 1 seconds
+    And I save profile changes
+    And I wait for 1 seconds
+    Then I see the profile page

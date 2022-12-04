@@ -1,0 +1,35 @@
+Feature: Edit Page with Datapool Apriori with title grether than 255 Char 
+    @user1 @web
+    Scenario: Como usuario quiero editar un page en la plataforma con un titulo de mas de 255 char
+    Given I navigate to page "<URL_GHOST>"
+    And I wait for 2 seconds
+    And I enter email "<EMAIL>"
+    And I enter password "<PASSWORD>"
+    And I click Sign in
+    And I wait for 2 seconds
+    When I click button page
+    And I wait for 1 seconds
+    When I click button new page
+    And I wait for 1 seconds
+    When I enter titulo "Aut quae consequatur quaerat numquam."
+    And I wait for 1 seconds
+    When I enter description "Commodi quos nostrum ipsam soluta. Vitae porro aut corrupti repellat ullam. Blanditiis architecto dolore earum enim et soluta omnis. Sequi minima est. Neque velit cum qui eligendi tempore deleniti occaecati eum ad."
+    And I wait for 2 seconds
+    When I click Publish
+    And I wait for 2 seconds
+    When I click Continue final review
+    And I wait for 1 seconds
+    When I click publish right now
+    And I wait for 3 seconds
+    When I click back editor
+    And I wait for 1 seconds
+    When I click back
+    And I wait for 1 seconds
+    When I open edition
+    And I wait for 1 seconds
+    Then I enter titulo "Omnis error impedit dolore officia quisquam magnam eligendi earum et. Facere autem qui tempore. Nesciunt repellat sunt repellendus rerum consectetur cumque est. Ipsa cumque officia ut eum. Aut non necessitatibus reiciendis. Doloremque voluptate amet eaque at numquam dicta recusandae autem facilis. In et sed sit ut sint adipisci nemo hic. Ut rem cumque quo repellat laborum nemo eius dolores. Quod impedit eum et iure velit ipsum. Qui incidunt culpa reiciendis laboriosam. Quis omnis provident est molestiae a beatae eum. Voluptates ut est quod consequatur neque rem vitae dolor blanditiis."
+    And I wait for 1 seconds
+    When I update
+    And I wait for 4 seconds
+    Then I find note creation error "Update failed: Title cannot be longer than 255 characters."
+    And I wait for 2 seconds

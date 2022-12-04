@@ -1,0 +1,13 @@
+Feature: Login
+
+  @user1 @web
+  Scenario: Como usuario de ghost quiero hacer login con correo valido y contrasena mayor a 255 caracteres
+    Given I navigate to page "<URL_GHOST>"
+    And I wait for 1 seconds
+    And I enter random email "<EMAIL>"
+    And I wait for 1 seconds
+    And I enter random password with length of "255"
+    And I wait for 1 seconds
+    And I click Sign in
+    And I wait for 1 seconds
+    Then I see the error Your password is incorrect. 

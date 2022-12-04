@@ -1,0 +1,28 @@
+Feature: Members
+
+  @user1 @web
+  Scenario: Como usuario de ghost edito un member con un correo existente
+    Given I navigate to page "<URL_GHOST>"
+    And I wait for 2 seconds
+    And I enter email "<EMAIL>"
+    And I enter password "<PASSWORD>"
+    And I click Sign in
+    And I wait for 2 seconds
+    And I click Members option
+    And I click New member button
+    And I enter random name member "$name_1"
+    And I enter random email member "$email_1"
+    And I save member
+    And I wait for 2 seconds
+    And I click Members option
+    And I click New member button
+    And I enter random name member "$name_2"
+    And I enter random email member "$email_2"
+    And I save member
+    And I wait for 2 seconds
+    And I click Members option
+    And I find a member "$$email_2"
+    Then I enter random email member "$$email_1"
+    And I save member
+    And I wait for 2 seconds
+    And I find email member error "Member already exists. Attempting to edit member with existing email address"

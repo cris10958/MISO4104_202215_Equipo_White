@@ -1,0 +1,13 @@
+Feature: Login
+
+  @user1 @web
+  Scenario: Como usuario de ghost quiero hacer login con cualquier email y sin contrasena
+    Given I navigate to page "<URL_GHOST>"
+    And I wait for 1 seconds
+    And I enter random email "$email_1"
+    And I wait for 1 seconds
+    And I enter password ""
+    And I wait for 1 seconds
+    And I click Sign in
+    And I wait for 1 seconds
+    Then I see the error Please fill out the form to sign in.
