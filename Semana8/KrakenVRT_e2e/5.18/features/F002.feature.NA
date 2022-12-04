@@ -1,7 +1,7 @@
-Feature: F001 - Crear una nueva pagina
+Feature: F002 - Editar una pagina publicada
 
 @user1 @web
-Scenario: Como administrador de la aplicación Ghost realizo el login, la creación y publicación de una pagina
+Scenario: Como administrador de la aplicación Ghost realizo el login, la creación y edicion de una pagina publicada
   Given I navigate to page "http://localhost:2368/ghost/#/signin"
   And I wait for 2 seconds
   When I enter email "<USERNAME>"
@@ -12,9 +12,12 @@ Scenario: Como administrador de la aplicación Ghost realizo el login, la creaci
   When I click button new
   When I enter titulo "<title_new_page>"
   When I enter description "<description>"
-  And I wait for 1 seconds
   When I click Publish
   When I click Continue final review
   When I click publish right now
   When I click back editor
+  When I click back
+  When I open edition
+  When I enter titulo "<new_title_page>"
+  When I update
   Then I click back
