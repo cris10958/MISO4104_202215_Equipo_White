@@ -37,7 +37,7 @@ Una vez descargada la carpeta del repositorio, realizar la instalación de depen
   ```
 
 ### Instrucciones:
-La Ejecución de estos productos esta basada en la estrategia de pruebas planteada para esta fase final, la cual se detalla en la wiki de esta semana. las instrucciones de ejecuccion de cada producto son:
+La Ejecución de estos productos esta basada en la estrategia de pruebas planteada para esta fase final, la cual se detalla en la [Wiki](https://github.com/cris10958/MISO4104_202215_Equipo_White/wiki/s8_final) de esta semana. las instrucciones de ejecuccion de cada producto son:
 
 #### Pruebas de Exploración sistematica con RIPuppet
 ```
