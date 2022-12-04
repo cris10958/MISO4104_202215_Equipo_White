@@ -73,6 +73,18 @@ cd MISO4104_202215_Equipo_White/Semana8/Kraken_datapool/
 ./node_modules/kraken-node/bin/kraken-node run
 ```
 
+El paso siguiente es modificar el archivo properties.json de cada una de las carpetas kraken, con las credenciales de acceso al panel de administrador de GHOST, se debe tener en cuenta que estos datos son especificos y determinados para la ejecución de las pruebas e2e de este escenario.
+
+![image](https://user-images.githubusercontent.com/111475768/204167443-eaabf4a1-2b71-458d-9140-27034d06f196.png)
+
+Debido a la restricción de la herramienta Kraken en Windows, se debe seleccionar solo un archivo con un escenario en la carpeta features\ y asegurar que solo un archivo tenga la extensión .feature. Todos los archivos restantes se han publicado con la extension .NA para renombrarlos cada que probemos algun escenario.
+
+![image](https://user-images.githubusercontent.com/111475768/205498101-1cdec764-8db3-4d41-916a-b0e0b0bd6f72.png)
+
+
+
+
+
 ## Semana 7: Generación de Datos
 
 ### Prerequisitos: 
